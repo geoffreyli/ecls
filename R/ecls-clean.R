@@ -3,7 +3,7 @@
 # Study. The output is saved to 'data-processed/ecls.csv'.
 
 # Begin by changing your working directory as necessary here
-setwd('~/Dropbox/ecls')
+setwd("~/geoffli @ UW/19 Wi - DATA 557/Final Project/ecls")
 
 # Load required packages ('install.packages()' first as necessary)
 library(tidyverse)
@@ -24,7 +24,8 @@ vars_chrs <- c("childid",
                "w3daded",
                "w3momed",
                "w3inccat",
-               "p5fstamp")
+               "p5fstamp",
+               "B5YRBORN") # added
 
 vars_nums <- c("w3momscr",
                "w3dadscr",
@@ -121,6 +122,7 @@ dta <- dta %>%
                 w3povrty,
                 p5fstamp,
                 c5r2mtsc,
-                c5r2mtsc_std)
+                c5r2mtsc_std
+                )
 
 write.csv(dta, 'data-processed/ecls.csv', row.names = FALSE)
